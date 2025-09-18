@@ -261,6 +261,26 @@
       // Close on overlay click
       lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
 
+      // Swipe support for mobile
+      let touchstartX = null;
+
+      lightbox.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      lightbox.addEventListener('touchend', e => {
+        if (touchstartX === null) return;
+        const touchendX = e.changedTouches[0].screenX;
+        const swipeThreshold = 50; // Min distance for a swipe in pixels
+
+        if (touchendX < touchstartX - swipeThreshold) {
+          show(current + 1); // Swiped left
+        } else if (touchendX > touchstartX + swipeThreshold) {
+          show(current - 1); // Swiped right
+        }
+        touchstartX = null; // Reset for next touch sequence
+      });
+
       // Keyboard controls
       document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('open')) return;
