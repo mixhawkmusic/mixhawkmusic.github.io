@@ -1,0 +1,20 @@
+baseURL = "/"
+title = "Mix Hawk"
+languageCode = "en-us"
+
+# No theme is used; we rely on custom layouts in layouts/
+
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
+
+defaultContentLanguage = "en"
+
+timezone = "America/Chicago"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # allow raw HTML inside Markdown
+
+[params]
+  author = "Mix Hawk"
+  description = "Country Singer/Songwriter"

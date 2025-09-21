@@ -11,7 +11,10 @@ node_modules/
 # Build output
 dist/
 build/
+public/
 
 # OS-specific
 .DS_Store
 Thumbs.db
+
+*.lock
