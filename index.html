@@ -12,6 +12,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .tabs {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: .75rem;
+    }
+    .tab-button {
+      font-family: "Special Elite", system-ui, sans-serif;
+      letter-spacing: .05em;
+      text-decoration: none;
+      padding: .4rem .8rem;
+      border-radius: 4px;
+      border: 1px solid var(--b);
+      transition: transform .06s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+      background: transparent;
+      color: var(--very-pale-orange);
+      cursor: pointer;
+    }
+    .tab-button.active {
+      background: var(--electric-brown);
+      color: #0b0908;
+      border-color: color-mix(in oklab, var(--electric-brown), black 20%);
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -98,30 +123,42 @@
     <section id="music" class="section section-music" aria-label="Music">
       <div class="wrap">
         <h2>Music</h2>
+        <div class="tabs music-tabs">
+          <button class="tab-button active" data-service="spotify">Spotify</button>
+          <button class="tab-button" data-service="apple">Apple Music</button>
+        </div>
         <div class="tracks">
           <article class="track">
-            <img alt="Honky Tonk Blue" src="assets/covers/honky-tonk-blue.png" height="978" width="978"/>
-            <p class="meta">Single — 3:34</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="#">Play</a>
-              <a class="link" href="#">Lyrics</a>
+            <h3>Honky Tonk Blue</h3>
+            <div class="tab-content">
+              <div class="music-player" data-service="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ArO44pyDuKLthaws1lTOp?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <div class="music-player" data-service="apple" style="display:none;">
+                  <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/honky-tonk-blue/1804668803"></iframe>
+              </div>
             </div>
           </article>
           <article class="track">
-            <img alt="Growing Love" src="assets/covers/growing-love.png" height="978" width="978"/>
-            <p class="meta">Single — 4:02</p>
-
-              <div class="actions">
-              <a class="btn btn-outline" href="#">Play</a>
-              <a class="link" href="#">Lyrics</a>
+            <h3>Growing Love</h3>
+            <div class="tab-content">
+              <div class="music-player" data-service="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3G16ljNgC1VsBRPWwPQeUh?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <div class="music-player" data-service="apple" style="display:none;">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/growin-love/1805018741"></iframe>
+              </div>
             </div>
           </article>
           <article class="track">
-            <img alt="What A Wonderful World" src="assets/covers/what-a-wonderful-world.png" height="978" width="978"/>
-            <p class="meta">Single — 3:47</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="#">Play</a>
-              <a class="link" href="#">Lyrics</a>
+            <h3>What A Wonderful World</h3>
+            <div class="tab-content">
+              <div class="music-player" data-service="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0UzRks83NDUfNvujnW3sA3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <div class="music-player" data-service="apple" style="display:none;">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/what-a-wonderful-world-feat-emily-e-finke/1804293784"></iframe>
+              </div>
             </div>
           </article>
         </div>
@@ -302,6 +339,28 @@
         }
       });
     })();
+  </script>
+
+  <script>
+    // Music player tabs
+    document.querySelectorAll('.music-tabs .tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const service = button.dataset.service;
+
+        // Update button active state
+        document.querySelectorAll('.music-tabs .tab-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Show/hide players
+        document.querySelectorAll('.music-player').forEach(player => {
+          if (player.dataset.service === service) {
+            player.style.display = 'block';
+          } else {
+            player.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
