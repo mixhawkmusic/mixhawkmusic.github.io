@@ -36,6 +36,19 @@
       color: #0b0908;
       border-color: color-mix(in oklab, var(--electric-brown), black 20%);
     }
+    .video-container {
+      margin-top: 2rem;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -75,6 +88,9 @@
             <a href="https://www.instagram.com/mixhawkmusic" class="social-link" aria-label="Mix Hawk on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/mixhawkmusic" class="social-link" aria-label="Mix Hawk on Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://x.com/music_hawk" class="social-link" aria-label="Mix Hawk on Twitter/X" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ED0HVP_Bgss?si=TH1_H_N0pgIaZEO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </div>
