@@ -160,6 +160,23 @@ img { max-width: 100%; height: auto; display: block; }
 .track .link { color: var(--verdigris); text-decoration: none; }
 .track .link:hover { color: var(--big-foot-feet); }
 
+/* Video grid */
+.section-video { background: linear-gradient(180deg, #0f0c0b, #14110f 60%, #0e0b0a); }
+.section-video h2 { font-family: "Special Elite", system-ui, sans-serif; font-size: clamp(1.6rem, 3vw, 2rem); letter-spacing: .05em; margin-top: 0; color: var(--very-pale-orange); }
+.video-grid { display: grid; grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) ); gap: 1rem; margin-top: 1rem; }
+.video-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35) inset, 0 1px 0 rgba(255,255,255,0.03);
+}
+.video-item h3 { margin: 0 0 .25rem; font-weight: 700; color: var(--rajah); letter-spacing: .02em; }
+.video-item .meta { margin: 0 0 .75rem; color: #b7aa98; font-size: .95rem; }
+.video-item .actions { display: flex; align-items: center; gap: .5rem; }
+.video-item .link { color: var(--verdigris); text-decoration: none; }
+.video-item .link:hover { color: var(--big-foot-feet); }
+
 /* Subtle grain over hero */
 .hero .texture {
   position: absolute; inset: 0; pointer-events: none;
