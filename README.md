@@ -295,8 +295,9 @@ The site includes links to Mix Hawk's profiles on:
 
 ## License
 
-<!-- TODO: Add license information -->
-License not specified. Please contact the repository owner for licensing details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+The MIT License is a permissive license that allows for reuse, modification, and distribution. Feel free to use this Hugo site structure as a template for your own projects.
 
 ## Contact
 
