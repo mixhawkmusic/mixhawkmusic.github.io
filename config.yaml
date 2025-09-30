@@ -1,0 +1,35 @@
+baseURL: "https://mixhawkmusic.github.io/"
+languageCode: "en-us"
+title: "Mix Hawk — Country Singer/Songwriter"
+
+params:
+  description: "Mix Hawk — Country Singer/Songwriter."
+  author: "Mix Hawk"
+  
+  social:
+    spotify: "https://open.spotify.com/artist/2GQvvZZoCA4seMtHqlx8az"
+    apple: "https://music.apple.com/us/artist/mix-hawk/1573823988"
+    youtube: "https://www.youtube.com/@mixhawkmusic"
+    instagram: "https://www.instagram.com/mixhawkmusic"
+    facebook: "https://www.facebook.com/mixhawkmusic"
+    twitter: "https://x.com/music_hawk"
+
+# Disable taxonomy pages (tags, categories) if not needed
+disableKinds:
+  - taxonomy
+  - term
+
+# Markup settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow raw HTML in markdown
+
+# Output settings
+outputs:
+  home:
+    - HTML
+
+# Build settings
+buildDrafts: false
+buildFuture: false
