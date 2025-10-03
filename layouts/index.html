@@ -12,6 +12,13 @@
       <div class="social">
         {{ partial "social-links.html" . }}
       </div>
+      <div class="support-music">
+        <stripe-buy-button
+          buy-button-id="buy_btn_1SDaoLIwZfiUtlazCqvroyJb"
+          publishable-key="pk_live_51SDaOJIwZfiUtlazwyo077Qh7xD6nWDYhGZvb00GKTgfU8Ek5cSbBKxGaw6mFDvrZ09n1nzsZGd4bGg5AWyUgMV800nW9dGZmn"
+        >
+        </stripe-buy-button>
+      </div>
       {{ with .Params.hero_video }}
       <div class="video-container">
         <iframe width="560" height="315" src="{{ . }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
