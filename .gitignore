@@ -12,6 +12,7 @@ node_modules/
 dist/
 build/
 *.lock
+public/
 
 # OS-specific
 .DS_Store
