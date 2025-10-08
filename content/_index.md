@@ -1,6 +1,6 @@
 ---
 title: "Mix Hawk — Country Singer/Songwriter"
-tagline: "Authentic Country Music."
+tagline: "Authentic Country Music"
 hero_video: "https://www.youtube.com/embed/ED0HVP_Bgss?si=TH1_H_N0pgIaZEO0"
 bio_image: "/images/mix-hawk-bio.jpg"
 ---

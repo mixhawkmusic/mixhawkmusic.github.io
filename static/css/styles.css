@@ -1,3 +1,27 @@
+
+/* https://www.onlinewebfonts.com/download/1e2a084dd03f989e7a1af4b5ee62cc32
+https://www.onlinewebfonts.com/download/0d02c5478254b9b31ea8fc5dd46149c2
+*/
+@font-face {
+    font-family: "Algerian Mesa Plain";
+    src: url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.eot");
+    src: url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b6a69f971181a779fa603b85e27cf9b7.svg#Algerian Mesa Plain")format("svg");
+}
+
+@font-face {
+    font-family: "Algerian Mesa W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.eot");
+    src: url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1e2a084dd03f989e7a1af4b5ee62cc32.svg#Algerian Mesa W00 Regular")format("svg");
+}
+
 :root {
   /* Vintage Country Color Scheme */
   --verdigris: #53BEB6;           /* accent */
@@ -77,7 +101,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero .hero-content { text-align: center; }
 .hero-title {
   margin: 0 0 .5rem;
-  font-family: "Special Elite", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Algerian Mesa W00 Regular", "Special Elite", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-size: clamp(2.8rem, 6vw, 5rem);
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -85,7 +109,10 @@ img { max-width: 100%; height: auto; display: block; }
   text-shadow: 0 1px 0 rgba(0,0,0,.8), 0 2px 12px rgba(0,0,0,.6);
 }
 .hero-title span { border-bottom: 6px double rgba(183,100,80,0.6); padding-bottom: .25rem; }
-.tagline { color: #dacdb9; font-size: clamp(1rem, 2.2vw, 1.25rem); margin: .5rem auto 1.25rem; max-width: 40ch; }
+.tagline {
+    font-family: "Cinzel Decorative", "Special Elite", Georgia, serif;
+    color: #dacdb9; font-size: clamp(1rem, 2.2vw, 1.25rem); margin: .5rem auto 1.25rem; max-width: 40ch;
+}
 
 .cta-row { display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center; margin: 1rem 0 1.25rem; }
 .btn {
