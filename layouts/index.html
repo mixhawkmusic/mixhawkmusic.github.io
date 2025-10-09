@@ -21,7 +21,7 @@
       </div>
       {{ with .Params.hero_video }}
       <div class="video-container">
-        <iframe width="560" height="315" src="{{ . }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="{{ . }}" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       {{ end }}
     </div>
@@ -58,17 +58,17 @@
         <div class="tab-content">
           {{ if .spotify }}
           <div class="music-player" data-service="spotify">
-            <iframe style="border-radius:12px" src="{{ .spotify }}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px; border:0;" src="{{ .spotify }}" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify Player"></iframe>
           </div>
           {{ end }}
           {{ if .apple }}
           <div class="music-player" data-service="apple" style="display:none;">
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="{{ .apple }}"></iframe>
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;border:0;" height="175" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="{{ .apple }}" title="Apple Music Player"></iframe>
           </div>
           {{ end }}
           {{ if .reverbnation }}
           <div class="music-player" data-service="reverbnation" style="display:none;">
-            <iframe width="100%" height="150" scrolling="no" frameborder="no" src="{{ .reverbnation }}" style="width:0px;min-width:100%;max-width:100%;"></iframe>
+            <iframe width="100%" height="150" src="{{ .reverbnation }}" style="min-width:100%;max-width:100%;border:0;" title="ReverbNation Player"></iframe>
           </div>
           {{ end }}
         </div>
@@ -84,7 +84,7 @@
     <h2>Videos</h2>
     {{ range .Site.Data.videos.list }}
     <div class="video-container">
-      <iframe width="560" height="315" src="{{ .url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="{{ .url }}" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     {{ end }}
   </div>
