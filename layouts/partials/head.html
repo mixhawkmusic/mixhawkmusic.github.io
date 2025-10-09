@@ -1,8 +1,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+
+  <!-- SEO Meta Tags -->
+  <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.tagline }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta name="keywords" content="{{ .Site.Params.keywords }}" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.tagline }}{{ else }}{{ .Title }}{{ end }}" />
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ogImage }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="{{ .Permalink }}" />
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.tagline }}{{ else }}{{ .Title }}{{ end }}" />
+  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ogImage }}" />
+  <meta name="twitter:site" content="@music_hawk" />
+  <meta name="twitter:creator" content="@music_hawk" />
+
+  <!-- Favicon -->
   <link rel="icon" href="{{ "/images/logo.svg" | relURL }}" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,4 +76,61 @@
   
   <!-- Stripe Payment Button -->
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Mix Hawk",
+    "alternateName": "Mix Hawk Music",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.BaseURL }}images/logo.svg",
+    "image": "{{ .Site.BaseURL }}{{ .Params.bio_image }}",
+    "description": "{{ .Site.Params.description }}",
+    "genre": ["Country", "Americana", "Country Rock"],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "St. Petersburg, Russia"
+    },
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tulsa",
+        "addressRegion": "OK",
+        "addressCountry": "US"
+      }
+    },
+    "sameAs": [
+      "{{ .Site.Params.social.spotify }}",
+      "{{ .Site.Params.social.apple }}",
+      "{{ .Site.Params.social.youtube }}",
+      "{{ .Site.Params.social.instagram }}",
+      "{{ .Site.Params.social.facebook }}",
+      "{{ .Site.Params.social.twitter }}"
+    ],
+    "member": {
+      "@type": "Person",
+      "name": "Mix Hawk",
+      "jobTitle": "Country Singer/Songwriter",
+      "description": "Country musician from Russia, now based in Tulsa, Oklahoma"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}",
+    "description": "{{ .Site.Params.description }}",
+    "publisher": {
+      "@type": "Person",
+      "name": "Mix Hawk"
+    }
+  }
+  </script>
+  {{ end }}
 </head>

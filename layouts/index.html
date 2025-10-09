@@ -1,10 +1,10 @@
 {{ define "main" }}
 <!-- Main / Hero -->
-<section id="home" class="section hero" aria-label="Main">
+<section id="home" class="section hero" aria-label="Main" itemscope itemtype="https://schema.org/MusicGroup">
   <div class="wrap">
     <div class="hero-content">
-      <h1 class="hero-title"><span>Mix Hawk</span></h1>
-      <p class="tagline">{{ .Params.tagline }}</p>
+      <h1 class="hero-title" itemprop="name"><span>Mix Hawk</span></h1>
+      <p class="tagline" itemprop="genre">{{ .Params.tagline }}</p>
       <div class="cta-row">
         <a class="btn btn-ghost" href="#music">Listen</a>
         <a class="btn btn-solid" href="#bio">About</a>
@@ -20,8 +20,11 @@
         </stripe-buy-button>
       </div>
       {{ with .Params.hero_video }}
-      <div class="video-container">
-        <iframe width="560" height="315" src="{{ . }}" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="video-container" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
+        <meta itemprop="name" content="Mix Hawk - Featured Video" />
+        <meta itemprop="description" content="Watch Mix Hawk's country music performance" />
+        <meta itemprop="uploadDate" content="{{ now.Format "2006-01-02" }}" />
+        <iframe width="560" height="315" src="{{ . }}" title="Mix Hawk Country Music Video - Official Performance" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
       {{ end }}
     </div>
@@ -30,22 +33,24 @@
 </section>
 
 <!-- Bio -->
-<section id="bio" class="section section-paper" aria-label="Bio">
+<section id="bio" class="section section-paper" aria-label="Bio" itemscope itemtype="https://schema.org/Person">
   <div class="wrap">
     <div class="paper">
-      <h2>Bio</h2>
+      <h2>Biography - <span itemprop="name">Mix Hawk</span></h2>
       {{ with .Params.bio_image }}
-        <img alt="Mix Hawk Portrait" src="{{ . | relURL }}" height="1037" width="1536"/>
+        <img alt="Mix Hawk - Country Singer and Songwriter Portrait from Tulsa Oklahoma" src="{{ . | relURL }}" height="1037" width="1536" itemprop="image" loading="lazy"/>
       {{ end }}
-      {{ .Content }}
+      <div itemprop="description">
+        {{ .Content }}
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Music -->
-<section id="music" class="section section-music" aria-label="Music">
+<section id="music" class="section section-music" aria-label="Music" itemscope itemtype="https://schema.org/MusicAlbum">
   <div class="wrap">
-    <h2>Music</h2>
+    <h2><span itemprop="name">Mix Hawk Music</span> - Listen on Streaming Platforms</h2>
     <div class="tabs music-tabs">
       <button class="tab-button active" data-service="spotify">Spotify</button>
       <button class="tab-button" data-service="apple">Apple Music</button>
@@ -53,8 +58,9 @@
     </div>
     <div class="tracks">
       {{ range .Site.Data.music.tracks }}
-      <article class="track">
-        <h3>{{ .title }}</h3>
+      <article class="track" itemscope itemtype="https://schema.org/MusicRecording">
+        <h3 itemprop="name">{{ .title }}</h3>
+        <meta itemprop="byArtist" content="Mix Hawk" />
         <div class="tab-content">
           {{ if .spotify }}
           <div class="music-player" data-service="spotify">
@@ -81,24 +87,28 @@
 <!-- Videos -->
 <section id="videos" class="section section-video" aria-label="Videos">
   <div class="wrap">
-    <h2>Videos</h2>
+    <h2>Music Videos - Mix Hawk Country Music</h2>
     {{ range .Site.Data.videos.list }}
-    <div class="video-container">
-      <iframe width="560" height="315" src="{{ .url }}" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-container" itemscope itemtype="https://schema.org/VideoObject">
+      <meta itemprop="name" content="Mix Hawk Music Video" />
+      <meta itemprop="description" content="Official music video by Mix Hawk" />
+      <meta itemprop="uploadDate" content="{{ now.Format "2006-01-02" }}" />
+      <iframe width="560" height="315" src="{{ .url }}" title="Mix Hawk Country Music Video - {{ .url }}" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
     </div>
     {{ end }}
   </div>
 </section>
 
 <!-- Gallery -->
-<section id="gallery" class="section section-gallery" aria-label="Photo Gallery">
+<section id="gallery" class="section section-gallery" aria-label="Photo Gallery" itemscope itemtype="https://schema.org/ImageGallery">
   <div class="wrap">
-    <h2>Gallery</h2>
+    <h2><span itemprop="name">Photo Gallery</span> - Mix Hawk Country Music Photos</h2>
     <div class="gallery-grid" id="galleryGrid">
       {{ range .Site.Data.gallery.images }}
-      <figure class="gallery-item">
+      <figure class="gallery-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <a href="{{ .url | relURL }}" data-index="{{ .index }}">
-          <img loading="lazy" src="{{ .url | relURL }}" alt="{{ .alt }}">
+          <img loading="lazy" src="{{ .url | relURL }}" alt="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk country music performance photo{{ end }}" itemprop="contentUrl">
+          <meta itemprop="name" content="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk Photo{{ end }}" />
         </a>
       </figure>
       {{ end }}

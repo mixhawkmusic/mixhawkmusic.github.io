@@ -3,8 +3,11 @@ languageCode: "en-us"
 title: "Mix Hawk — Country Singer/Songwriter"
 
 params:
-  description: "Mix Hawk — Country Singer/Songwriter."
+  description: "Mix Hawk is an authentic country music singer-songwriter from Tulsa, Oklahoma. Listen to original country songs, watch music videos, and discover the unique story of a Russian-born country musician."
   author: "Mix Hawk"
+  tagline: "Authentic Country Music from Tulsa, Oklahoma"
+  keywords: "Mix Hawk, country music, singer-songwriter, Tulsa Oklahoma, country singer, authentic country, Americana, country rock, Russian country musician, original country music"
+  ogImage: "images/mix-hawk-bio.jpg"
   
   social:
     spotify: "https://open.spotify.com/artist/2GQvvZZoCA4seMtHqlx8az"
