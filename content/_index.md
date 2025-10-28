@@ -2,7 +2,7 @@
 title: "Mix Hawk — Country Singer/Songwriter"
 description: "Mix Hawk is an authentic country music singer-songwriter from Tulsa, Oklahoma. Born in Russia and inspired by Charlie Daniels Band and John Denver, Mix Hawk brings unique authentic country music. Listen to original songs on Spotify and Apple Music."
 tagline: "Authentic Country Music"
-hero_video: "https://www.youtube.com/embed/ED0HVP_Bgss?si=TH1_H_N0pgIaZEO0"
+hero_video: "https://www.youtube.com/embed/UaTD0qY8EmQ?si=LhcWnc9ZunzKpTTl"
 bio_image: "/images/mix-hawk-bio.jpg"
 ---
 
