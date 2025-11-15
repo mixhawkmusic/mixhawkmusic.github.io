@@ -38,6 +38,7 @@ The Mix Hawk Music website had a single photo gallery with all 20 images display
 - Studio (5 photos)
 - Press Kit (5 photos)
 - Behind the Stage (4 photos)
+- Heroes and Friends (0 photos)
 
 **Data Structure:**
 ```
@@ -45,7 +46,8 @@ data/galleries/
 ├── live-shows.yaml
 ├── studio.yaml
 ├── press-kit.yaml
-└── behind-stage.yaml
+├── behind-stage.yaml
+└── heroes-friends.yaml
 ```
 
 Each YAML file contains:

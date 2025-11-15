@@ -1,0 +1,13 @@
+name: "Heroes and Friends"
+description: "Celebrating the legends and friends who inspire"
+slug: "heroes-friends"
+featured: true
+order: 5
+images:
+  - url: "images/gallery/mixhawkmusic-gallery-010.jpg"
+    alt: "Mix Hawk with friends and fellow musicians"
+    index: 9
+
+  - url: "images/gallery/mixhawkmusic-gallery-012.jpg"
+    alt: "Mix Hawk celebrating with heroes of country music"
+    index: 11

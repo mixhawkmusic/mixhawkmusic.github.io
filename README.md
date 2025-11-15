@@ -202,6 +202,7 @@ Available gallery categories:
 - Studio (`data/galleries/studio.yaml`)
 - Press Kit (`data/galleries/press-kit.yaml`)
 - Behind the Stage (`data/galleries/behind-stage.yaml`)
+- Heroes and Friends (`data/galleries/heroes-friends.yaml`)
 
 **Site Settings & Social Links:**
 Edit `config.yaml`:
