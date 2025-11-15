@@ -1,0 +1,25 @@
+name: "Press Kit"
+description: "Professional photos for media and press"
+slug: "press-kit"
+featured: true
+order: 3
+images:
+  - url: "images/gallery/mixhawkmusic-gallery-004.jpg"
+    alt: "Mix Hawk professional portrait"
+    index: 3
+
+  - url: "images/gallery/mixhawkmusic-gallery-008.jpg"
+    alt: "Mix Hawk press photo"
+    index: 7
+
+  - url: "images/gallery/mixhawkmusic-gallery-012.jpg"
+    alt: "Mix Hawk promotional photo"
+    index: 11
+
+  - url: "images/gallery/mixhawkmusic-gallery-016.jpg"
+    alt: "Mix Hawk professional headshot"
+    index: 15
+
+  - url: "images/gallery/mixhawkmusic-gallery-020.jpg"
+    alt: "Mix Hawk press kit photo"
+    index: 19

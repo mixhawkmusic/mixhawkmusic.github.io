@@ -24,7 +24,7 @@ This is a portfolio website built with Hugo static site generator, showcasing Mi
 - 📱 Fully responsive design
 - 🎵 Multiple music streaming platform embeds (Spotify, Apple Music, ReverbNation)
 - 🎬 YouTube video integration
-- 🖼️ Interactive photo gallery with lightbox viewer
+- 🖼️ Interactive multi-category photo gallery with lightbox viewer and category filtering
 - ♿ Accessibility features (ARIA labels, keyboard navigation, focus management)
 - 🎨 Vintage country-themed design with custom color scheme
 - 🔄 Smooth scroll navigation
@@ -180,13 +180,28 @@ Edit `data/videos.yaml`:
 ```
 
 **Gallery Images:**
-1. Add images to `static/images/gallery/`
-2. Edit `data/gallery.yaml`:
+The site features a multi-category gallery system with filtering tabs.
+
+1. Add images to `static/images/gallery/` (or organize in subdirectories)
+2. Create/edit category files in `data/galleries/`:
 ```yaml
-- url: "/images/gallery/photo.jpg"
-  alt: "Photo description"
-  index: 1
+# Example: data/galleries/live-shows.yaml
+name: "Live Shows"
+description: "Performances from stages across the country"
+slug: "live-shows"
+featured: true
+order: 1
+images:
+  - url: "images/gallery/photo.jpg"
+    alt: "Photo description"
+    index: 0
 ```
+
+Available gallery categories:
+- Live Shows (`data/galleries/live-shows.yaml`)
+- Studio (`data/galleries/studio.yaml`)
+- Press Kit (`data/galleries/press-kit.yaml`)
+- Behind the Scenes (`data/galleries/behind-scenes.yaml`)
 
 **Site Settings & Social Links:**
 Edit `config.yaml`:

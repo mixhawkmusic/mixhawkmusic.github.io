@@ -1,0 +1,25 @@
+name: "Studio"
+description: "Behind the music in the recording studio"
+slug: "studio"
+featured: true
+order: 2
+images:
+  - url: "images/gallery/mixhawkmusic-gallery-003.jpg"
+    alt: "Mix Hawk in the recording studio"
+    index: 2
+
+  - url: "images/gallery/mixhawkmusic-gallery-006.jpg"
+    alt: "Mix Hawk recording session"
+    index: 5
+
+  - url: "images/gallery/mixhawkmusic-gallery-010.jpg"
+    alt: "Mix Hawk working on new music"
+    index: 9
+
+  - url: "images/gallery/mixhawkmusic-gallery-014.jpg"
+    alt: "Mix Hawk studio recording"
+    index: 13
+
+  - url: "images/gallery/mixhawkmusic-gallery-017.jpg"
+    alt: "Mix Hawk in studio with guitar"
+    index: 16

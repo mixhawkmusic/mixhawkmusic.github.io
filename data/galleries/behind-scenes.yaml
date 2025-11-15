@@ -1,0 +1,21 @@
+name: "Behind the Scenes"
+description: "Candid moments and life on the road"
+slug: "behind-scenes"
+featured: true
+order: 4
+images:
+  - url: "images/gallery/mixhawkmusic-gallery-005.jpg"
+    alt: "Mix Hawk behind the scenes"
+    index: 4
+
+  - url: "images/gallery/mixhawkmusic-gallery-009.jpg"
+    alt: "Mix Hawk backstage moment"
+    index: 8
+
+  - url: "images/gallery/mixhawkmusic-gallery-013.jpg"
+    alt: "Mix Hawk candid photo"
+    index: 12
+
+  - url: "images/gallery/mixhawkmusic-gallery-018.jpg"
+    alt: "Mix Hawk behind the scenes"
+    index: 17

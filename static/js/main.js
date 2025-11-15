@@ -19,7 +19,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 (function(){
   const grid = document.getElementById('galleryGrid');
   if (!grid) return;
-  const links = Array.from(grid.querySelectorAll('a'));
   const lightbox = document.getElementById('lightbox');
   const img = document.getElementById('lightboxImage');
   const caption = document.getElementById('lightboxCaption');
@@ -28,11 +27,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   const btnClose = document.getElementById('lightboxClose');
   let current = 0;
   let lastFocus = null;
+  let activeLinks = []; // Links currently visible in the filtered gallery
+
+  function updateActiveLinks() {
+    // Get only visible gallery items
+    const visibleItems = Array.from(grid.querySelectorAll('.gallery-item')).filter(item => {
+      return item.style.display !== 'none';
+    });
+    activeLinks = visibleItems.map(item => item.querySelector('a'));
+  }
 
   function show(i){
-    if (i < 0) i = links.length - 1; else if (i >= links.length) i = 0;
+    updateActiveLinks();
+    if (activeLinks.length === 0) return;
+    if (i < 0) i = activeLinks.length - 1;
+    else if (i >= activeLinks.length) i = 0;
     current = i;
-    const link = links[current];
+    const link = activeLinks[current];
     const imageUrl = link.getAttribute('href');
     const alt = link.querySelector('img')?.getAttribute('alt') || '';
     img.src = imageUrl;
@@ -40,9 +51,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     caption.textContent = alt;
   }
 
-  function open(i){
+  function open(clickedLink){
+    updateActiveLinks();
     lastFocus = document.activeElement;
-    show(i);
+    // Find the index of clicked link in the active (visible) links
+    const idx = activeLinks.indexOf(clickedLink);
+    show(idx >= 0 ? idx : 0);
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
@@ -57,12 +71,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
-  // Open from thumbnails
-  links.forEach((a, idx) => {
-    a.addEventListener('click', e => {
+  // Open from thumbnails - use event delegation
+  grid.addEventListener('click', e => {
+    const link = e.target.closest('a');
+    if (link && link.closest('.gallery-item')) {
       e.preventDefault();
-      open(idx);
-    });
+      open(link);
+    }
   });
 
   // Controls
@@ -133,4 +148,49 @@ document.querySelectorAll('.music-tabs .tab-button').forEach(button => {
       }
     });
   });
+});
+
+// Gallery category filtering
+document.querySelectorAll('.gallery-tabs .tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.dataset.gallery;
+
+    // Update button active state
+    document.querySelectorAll('.gallery-tabs .tab-button').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Filter gallery items with smooth animation
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = 'block';
+        // Trigger reflow for animation
+        setTimeout(() => item.classList.add('visible'), 10);
+      } else {
+        item.classList.remove('visible');
+        setTimeout(() => item.style.display = 'none', 300);
+      }
+    });
+
+    // Update URL hash for shareable links
+    if (category === 'all') {
+      history.replaceState(null, null, '#gallery');
+    } else {
+      history.replaceState(null, null, `#gallery/${category}`);
+    }
+  });
+});
+
+// Handle initial gallery filter from URL hash
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if (hash.startsWith('#gallery/')) {
+    const category = hash.replace('#gallery/', '');
+    const button = document.querySelector(`.gallery-tabs .tab-button[data-gallery="${category}"]`);
+    if (button) {
+      button.click();
+    }
+  }
+  // Make all gallery items visible initially
+  document.querySelectorAll('.gallery-item').forEach(item => item.classList.add('visible'));
 });
