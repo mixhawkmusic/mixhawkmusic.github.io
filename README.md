@@ -14,7 +14,7 @@ This is a portfolio website built with Hugo static site generator, showcasing Mi
 - **Template Language**: Go Templates (Hugo)
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)
 - **Content Format**: Markdown + YAML data files
-- **Dependencies**: 
+- **Dependencies**:
   - Google Fonts (Special Elite, Cormorant Garamond)
   - Font Awesome 6.5.1 (icons)
 - **Deployment**: GitHub Pages compatible
@@ -64,7 +64,7 @@ sudo snap install hugo
 hugo version
 ```
 
-## Setup
+## Quick Start
 
 ### Clone the Repository
 
@@ -75,27 +75,15 @@ cd mixhawkmusic.github.com
 
 ### Local Development
 
-Start the Hugo development server with live reload:
-
 ```bash
 hugo server
 ```
 
 Then open your browser to `http://localhost:1313`
 
-The development server will automatically rebuild the site when you make changes to content, templates, or static files.
+### Production Build
 
-### Building for Production
-
-To generate the static site in the `public/` directory:
-
-Standard build
-```shell
-hugo
-```
-
-Minified build (recommended for production)
-```shell
+```bash
 hugo --minify
 ```
 
@@ -111,16 +99,21 @@ mixhawkmusic.github.com/
 ├── data/                       # Structured data (YAML)
 │   ├── music.yaml             # Music tracks/embeds
 │   ├── videos.yaml            # Video embeds
-│   └── gallery.yaml           # Gallery images
+│   └── galleries/             # Gallery categories
+│       ├── live-shows.yaml
+│       ├── studio.yaml
+│       ├── press-kit.yaml
+│       ├── behind-stage.yaml
+│       └── heroes-friends.yaml
 ├── layouts/                    # Hugo templates
 │   ├── _default/
 │   │   └── baseof.html        # Base template structure
 │   ├── index.html             # Homepage template
 │   └── partials/              # Reusable components
-│       ├── head.html          # HTML head section
-│       ├── header.html        # Site header
-│       ├── footer.html        # Site footer
-│       └── social-links.html  # Social media links
+│       ├── head.html
+│       ├── header.html
+│       ├── footer.html
+│       └── social-links.html
 ├── static/                     # Static assets (copied as-is to public/)
 │   ├── css/
 │   │   └── styles.css         # Main stylesheet
@@ -128,131 +121,27 @@ mixhawkmusic.github.com/
 │   │   └── main.js            # JavaScript functionality
 │   └── images/                # All images
 │       ├── covers/            # Album cover images
-│       ├── gallery/           # Photo gallery (20 photos)
+│       ├── gallery/           # Photo gallery
 │       ├── logo.svg           # Site logo
 │       ├── mix-hawk-bio.jpg   # Bio photo
 │       └── noise.svg          # Texture overlay
-├── public/                     # Generated site (git-ignored, created by hugo build)
+├── public/                     # Generated site (created by hugo build)
+├── CLAUDE.md                   # AI assistant guidance (see this for detailed dev docs)
 └── README.md                   # This file
 ```
 
-### Key Files & Directories
+## Gallery Categories
 
-- **`config.yaml`**: Site-wide settings including title, description, social media URLs
-- **`content/_index.md`**: Homepage markdown content with front matter (title, tagline, hero video, bio)
-- **`data/*.yaml`**: Structured data for music tracks, videos, and gallery images
-- **`layouts/`**: Hugo templates using Go template language
-- **`static/`**: Static assets served directly (CSS, JS, images)
-- **`public/`**: Generated static site output (created by `hugo` build command)
-
-## Content Management
-
-Hugo separates content from presentation, making it easy to update the site:
-
-### Updating Content
-
-**Biography Text:**
-Edit `content/_index.md` - write in Markdown format with front matter variables:
-```yaml
----
-title: "Mix Hawk Music"
-tagline: "Singer • Songwriter • Guitar Player"
-hero_video: "https://www.youtube.com/embed/..."
-bio_image: "/images/mix-hawk-bio.jpg"
----
-Your bio content in Markdown here...
-```
-
-**Music Tracks:**
-Edit `data/music.yaml`:
-```yaml
-- title: "Song Title"
-  spotify: "https://open.spotify.com/embed/..."
-  apple_music: "https://embed.music.apple.com/..."
-  reverbnation: "https://www.reverbnation.com/widget_code/..."
-```
-
-**Videos:**
-Edit `data/videos.yaml`:
-```yaml
-- url: "https://www.youtube.com/embed/VIDEO_ID"
-  title: "Video Title"
-```
-
-**Gallery Images:**
-The site features a multi-category gallery system with filtering tabs.
-
-1. Add images to `static/images/gallery/` (or organize in subdirectories)
-2. Create/edit category files in `data/galleries/`:
-```yaml
-# Example: data/galleries/live-shows.yaml
-name: "Live Shows"
-description: "Performances from stages across the country"
-slug: "live-shows"
-featured: true
-order: 1
-images:
-  - url: "images/gallery/photo.jpg"
-    alt: "Photo description"
-    index: 0
-```
-
-Available gallery categories:
+Available photo gallery categories:
 - Live Shows (`data/galleries/live-shows.yaml`)
 - Studio (`data/galleries/studio.yaml`)
 - Press Kit (`data/galleries/press-kit.yaml`)
 - Behind the Stage (`data/galleries/behind-stage.yaml`)
 - Heroes and Friends (`data/galleries/heroes-friends.yaml`)
 
-**Site Settings & Social Links:**
-Edit `config.yaml`:
-```yaml
-params:
-  social:
-    spotify: "https://open.spotify.com/artist/..."
-    instagram: "https://instagram.com/..."
-    # ... other social links
-```
-
-### Template Customization
-
-Hugo templates use Go template language:
-- `{{ .Content }}`: Renders Markdown content
-- `{{ .Params.variable }}`: Accesses front matter variables
-- `{{ .Site.Params.variable }}`: Accesses config.yaml parameters
-- `{{ range .Site.Data.music }}`: Loops through data files
-- `{{ partial "name.html" . }}`: Includes partial templates
-
-## Scripts
-
-The website includes JavaScript in `static/js/main.js` for:
-
-1. **Smooth Scrolling**: Enables smooth navigation between sections
-2. **Gallery Lightbox**: Interactive image viewer with:
-   - Click to open full-size images
-   - Keyboard navigation (arrow keys, Escape to close)
-   - Touch gestures (swipe left/right on mobile)
-   - Focus management for accessibility
-3. **Music Player Tabs**: Switches between different streaming platform embeds
-4. **Copyright Year**: Auto-updates footer year
-
-## Environment Variables
-
-None required. The site has no backend or API integrations requiring configuration.
-
-## Tests
-
-<!-- TODO: Add testing framework and tests -->
-Currently, no automated tests are implemented. Manual testing is performed across:
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile devices (iOS, Android)
-- Accessibility tools (screen readers, keyboard-only navigation)
-
 ## Deployment
 
 ### GitHub Pages
-
-This repository is configured for GitHub Pages deployment. The workflow is:
 
 1. **Build the site locally:**
    ```bash
@@ -268,11 +157,9 @@ This repository is configured for GitHub Pages deployment. The workflow is:
 
 3. GitHub Pages will serve the site from the `public/` directory or configured branch.
 
-**Note:** Make sure the `public/` directory is tracked in git for GitHub Pages deployment, or configure GitHub Pages to build from a specific branch/directory.
+**Note:** Make sure the `public/` directory is tracked in git for GitHub Pages deployment.
 
 ### Alternative Hosting Options
-
-To deploy to other static hosting services:
 
 **Netlify / Vercel:**
 1. Connect your GitHub repository
@@ -282,7 +169,7 @@ To deploy to other static hosting services:
 
 **Manual Deployment:**
 1. Build the site: `hugo --minify`
-2. Upload the `public/` directory contents to your hosting provider (AWS S3, DigitalOcean, etc.)
+2. Upload the `public/` directory contents to your hosting provider
 3. Configure the hosting to serve `index.html` as the default document
 
 ## Browser Support
@@ -299,21 +186,13 @@ Modern CSS features used:
 - `color-mix()` for dynamic color generation
 - `backdrop-filter` for glassmorphism effects
 
-## Social Media Links
+## Documentation
 
-The site includes links to Mix Hawk's profiles on:
-- Spotify
-- Apple Music
-- YouTube
-- Instagram
-- Facebook
-- Twitter/X
+For detailed development documentation, content management instructions, and architecture details, see **[CLAUDE.md](CLAUDE.md)**.
 
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-The MIT License is a permissive license that allows for reuse, modification, and distribution. Feel free to use this Hugo site structure as a template for your own projects.
 
 ## Contact
 
@@ -321,4 +200,4 @@ For inquiries about Mix Hawk or this website, please reach out through the socia
 
 ---
 
-**Last Updated**: 2025-10-09
+**Last Updated**: 2025-11-14
