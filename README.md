@@ -201,7 +201,7 @@ Available gallery categories:
 - Live Shows (`data/galleries/live-shows.yaml`)
 - Studio (`data/galleries/studio.yaml`)
 - Press Kit (`data/galleries/press-kit.yaml`)
-- Behind the Scenes (`data/galleries/behind-scenes.yaml`)
+- Behind the Stage (`data/galleries/behind-stage.yaml`)
 
 **Site Settings & Social Links:**
 Edit `config.yaml`:

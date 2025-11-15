@@ -1,11 +1,11 @@
-name: "Behind the Scenes"
+name: "Behind the Stage"
 description: "Candid moments and life on the road"
-slug: "behind-scenes"
+slug: "behind-stage"
 featured: true
 order: 4
 images:
   - url: "images/gallery/mixhawkmusic-gallery-005.jpg"
-    alt: "Mix Hawk behind the scenes"
+    alt: "Mix Hawk behind the stage"
     index: 4
 
   - url: "images/gallery/mixhawkmusic-gallery-009.jpg"
@@ -17,5 +17,5 @@ images:
     index: 12
 
   - url: "images/gallery/mixhawkmusic-gallery-018.jpg"
-    alt: "Mix Hawk behind the scenes"
+    alt: "Mix Hawk behind the stage"
     index: 17

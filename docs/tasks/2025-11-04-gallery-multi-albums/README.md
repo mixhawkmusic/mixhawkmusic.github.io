@@ -37,7 +37,7 @@ The Mix Hawk Music website had a single photo gallery with all 20 images display
 - Live Shows (6 photos)
 - Studio (5 photos)
 - Press Kit (5 photos)
-- Behind the Scenes (4 photos)
+- Behind the Stage (4 photos)
 
 **Data Structure:**
 ```
@@ -45,7 +45,7 @@ data/galleries/
 ├── live-shows.yaml
 ├── studio.yaml
 ├── press-kit.yaml
-└── behind-scenes.yaml
+└── behind-stage.yaml
 ```
 
 Each YAML file contains:
@@ -70,7 +70,7 @@ images:
 - `data/galleries/live-shows.yaml`
 - `data/galleries/studio.yaml`
 - `data/galleries/press-kit.yaml`
-- `data/galleries/behind-scenes.yaml`
+- `data/galleries/behind-stage.yaml`
 
 **Action:** Distributed existing 20 photos from `data/gallery.yaml` across the four category files.
 
@@ -182,7 +182,7 @@ Uses Hugo's data file iteration to dynamically generate tabs and gallery items:
 data/galleries/live-shows.yaml       (57 lines)
 data/galleries/studio.yaml           (47 lines)
 data/galleries/press-kit.yaml        (47 lines)
-data/galleries/behind-scenes.yaml    (37 lines)
+data/galleries/behind-stage.yaml     (37 lines)
 ```
 
 ### Modified Files (4)
@@ -295,7 +295,7 @@ git push origin main
 
 ### For Visitors
 1. Navigate to Gallery section
-2. Click category tab (All, Live Shows, Studio, Press Kit, Behind the Scenes)
+2. Click category tab (All, Live Shows, Studio, Press Kit, Behind the Stage)
 3. Photos filter to selected category
 4. Click any photo to open lightbox
 5. Navigate with arrow keys, swipe gestures, or prev/next buttons
