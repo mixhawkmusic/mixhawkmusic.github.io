@@ -117,7 +117,7 @@
       {{ end }}
       {{ $sortedGalleries = sort $sortedGalleries "gallery.order" }}
       {{ range $sortedGalleries }}
-      {{ if not .Site.Params.gallery.showAllTab }}
+      {{ if not $.Site.Params.gallery.showAllTab }}
         <button class="tab-button{{ if eq .gallery.order 1 }} active{{ end }}" data-gallery="{{ .gallery.slug }}">{{ .gallery.name }}</button>
       {{ else }}
         <button class="tab-button" data-gallery="{{ .gallery.slug }}">{{ .gallery.name }}</button>
