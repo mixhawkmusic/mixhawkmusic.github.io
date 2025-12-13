@@ -108,10 +108,20 @@
 
     <!-- Gallery Category Tabs -->
     <div class="tabs gallery-tabs">
+      {{ if .Site.Params.gallery.showAllTab }}
       <button class="tab-button active" data-gallery="all">All</button>
+      {{ end }}
+      {{ $sortedGalleries := slice }}
       {{ range $key, $value := .Site.Data.galleries }}
-      {{ $gallery := index $.Site.Data.galleries $key }}
-      <button class="tab-button" data-gallery="{{ $gallery.slug }}">{{ $gallery.name }}</button>
+      {{ $sortedGalleries = $sortedGalleries | append (dict "key" $key "gallery" (index $.Site.Data.galleries $key)) }}
+      {{ end }}
+      {{ $sortedGalleries = sort $sortedGalleries "gallery.order" }}
+      {{ range $sortedGalleries }}
+      {{ if not .Site.Params.gallery.showAllTab }}
+        <button class="tab-button{{ if eq .gallery.order 1 }} active{{ end }}" data-gallery="{{ .gallery.slug }}">{{ .gallery.name }}</button>
+      {{ else }}
+        <button class="tab-button" data-gallery="{{ .gallery.slug }}">{{ .gallery.name }}</button>
+      {{ end }}
       {{ end }}
     </div>
 
@@ -119,10 +129,16 @@
       <meta itemprop="name" content="Mix Hawk Photo Gallery" />
       <meta itemprop="description" content="Official Mix Hawk Music Photos" />
 
-      <!-- Render all images from all galleries -->
+      <!-- Render all images from all galleries, sorted by index -->
+      {{ $sortedGalleries := slice }}
       {{ range $key, $value := .Site.Data.galleries }}
-      {{ $gallery := index $.Site.Data.galleries $key }}
-      {{ range $gallery.images }}
+      {{ $sortedGalleries = $sortedGalleries | append (dict "key" $key "gallery" (index $.Site.Data.galleries $key)) }}
+      {{ end }}
+      {{ $sortedGalleries = sort $sortedGalleries "gallery.order" }}
+      {{ range $sortedGalleries }}
+      {{ $gallery := .gallery }}
+      {{ $sortedImages := sort $gallery.images "index" }}
+      {{ range $sortedImages }}
       <figure class="gallery-item" data-category="{{ $gallery.slug }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <a href="{{ .url | relURL }}" data-index="{{ .index }}">
           <img loading="lazy" src="{{ .url | relURL }}" alt="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk country music performance photo{{ end }}" itemprop="contentUrl">
