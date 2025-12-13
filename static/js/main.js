@@ -151,46 +151,57 @@ document.querySelectorAll('.music-tabs .tab-button').forEach(button => {
 });
 
 // Gallery category filtering
-document.querySelectorAll('.gallery-tabs .tab-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const category = button.dataset.gallery;
+function filterGallery(category, updateHash = true) {
+  // Update button active state
+  document.querySelectorAll('.gallery-tabs .tab-button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.gallery === category);
+  });
 
-    // Update button active state
-    document.querySelectorAll('.gallery-tabs .tab-button').forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+  // Filter gallery items
+  const items = document.querySelectorAll('.gallery-item');
+  items.forEach(item => {
+    if (category === 'all' || item.dataset.category === category) {
+      item.style.display = 'block';
+      setTimeout(() => item.classList.add('visible'), 10);
+    } else {
+      item.classList.remove('visible');
+      item.style.display = 'none';
+    }
+  });
 
-    // Filter gallery items with smooth animation
-    const items = document.querySelectorAll('.gallery-item');
-    items.forEach(item => {
-      if (category === 'all' || item.dataset.category === category) {
-        item.style.display = 'block';
-        // Trigger reflow for animation
-        setTimeout(() => item.classList.add('visible'), 10);
-      } else {
-        item.classList.remove('visible');
-        setTimeout(() => item.style.display = 'none', 300);
-      }
-    });
-
-    // Update URL hash for shareable links
+  // Update URL hash for shareable links
+  if (updateHash) {
     if (category === 'all') {
       history.replaceState(null, null, '#gallery');
     } else {
       history.replaceState(null, null, `#gallery/${category}`);
     }
-  });
+  }
+}
+
+document.querySelectorAll('.gallery-tabs .tab-button').forEach(button => {
+  button.addEventListener('click', () => filterGallery(button.dataset.gallery));
 });
 
-// Handle initial gallery filter from URL hash
-window.addEventListener('DOMContentLoaded', () => {
+// Apply initial gallery filter immediately (script is at end of body, DOM is ready)
+(function initGalleryFilter() {
   const hash = window.location.hash;
+  let category = null;
+
+  // Check URL hash first
   if (hash.startsWith('#gallery/')) {
-    const category = hash.replace('#gallery/', '');
-    const button = document.querySelector(`.gallery-tabs .tab-button[data-gallery="${category}"]`);
-    if (button) {
-      button.click();
-    }
+    const hashCategory = hash.replace('#gallery/', '');
+    const button = document.querySelector(`.gallery-tabs .tab-button[data-gallery="${hashCategory}"]`);
+    if (button) category = hashCategory;
   }
-  // Make all gallery items visible initially
-  document.querySelectorAll('.gallery-item').forEach(item => item.classList.add('visible'));
-});
+
+  // Fall back to first tab's category (Live Shows with order:1)
+  if (!category) {
+    const firstTab = document.querySelector('.gallery-tabs .tab-button');
+    if (firstTab) category = firstTab.dataset.gallery;
+  }
+
+  if (category) {
+    filterGallery(category, false);
+  }
+})();
