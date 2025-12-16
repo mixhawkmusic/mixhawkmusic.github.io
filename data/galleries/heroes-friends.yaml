@@ -5,113 +5,149 @@ featured: true
 order: 5
 images:
   - url: "images/gallery/heroes-friends/amyjo.jpg"
-    alt: "amyjo"
-    index: 1
-  - url: "images/gallery/heroes-friends/birdie.jpg"
-    alt: "birdie"
-    index: 2
-  - url: "images/gallery/heroes-friends/branded.jpg"
-    alt: "branded"
-    index: 4
-  - url: "images/gallery/heroes-friends/byronberline.jpg"
-    alt: "byronberline"
-    index: 5
-  - url: "images/gallery/heroes-friends/byronberlineband.jpg"
-    alt: "byronberlineband"
-    index: 6
-  - url: "images/gallery/heroes-friends/byronjam.jpg"
-    alt: "byronjam"
-    index: 7
-  - url: "images/gallery/heroes-friends/carman.jpg"
-    alt: "carman"
-    index: 8
-  - url: "images/gallery/heroes-friends/charliedaniels.jpg"
-    alt: "charliedaniels"
-    index: 9
-  - url: "images/gallery/heroes-friends/davidingles.jpg"
-    alt: "davidingles"
-    index: 10
-  - url: "images/gallery/heroes-friends/ekki.jpg"
-    alt: "ekki"
-    index: 12
-  - url: "images/gallery/heroes-friends/emilyefinke.jpg"
-    alt: "emilyefinke"
-    index: 13
-  - url: "images/gallery/heroes-friends/fredlabour.jpg"
-    alt: "fredlabour"
-    index: 14
-  - url: "images/gallery/heroes-friends/gene1.jpg"
-    alt: "gene1"
-    index: 15
-  - url: "images/gallery/heroes-friends/gene2.jpg"
-    alt: "gene2"
-    index: 16
-  - url: "images/gallery/heroes-friends/holliewilliams.jpg"
-    alt: "holliewilliams"
-    index: 17
-  - url: "images/gallery/heroes-friends/jimedbrown.jpg"
-    alt: "jimedbrown"
-    index: 18
-  - url: "images/gallery/heroes-friends/jimlawderdale.jpg"
-    alt: "jimlawderdale"
-    index: 19
-  - url: "images/gallery/heroes-friends/jimmycnewman.jpg"
-    alt: "jimmycnewman"
-    index: 20
-  - url: "images/gallery/heroes-friends/joannecash.jpg"
-    alt: "joannecash"
-    index: 21
-  - url: "images/gallery/heroes-friends/joediffie.jpg"
-    alt: "joediffie"
-    index: 22
-  - url: "images/gallery/heroes-friends/johncowan.jpg"
-    alt: "johncowan"
-    index: 23
-  - url: "images/gallery/heroes-friends/kaitlinmae1.jpg"
-    alt: "kaitlinmae1"
-    index: 24
-  - url: "images/gallery/heroes-friends/kaitlinmae2.jpg"
-    alt: "kaitlinmae2"
+    alt: "Mix Hawk with Amy Jo at 2025 ISSA Awards"
     index: 25
-  - url: "images/gallery/heroes-friends/lancecarpenter.jpg"
-    alt: "lancecarpenter"
-    index: 26
+
+  - url: "images/gallery/heroes-friends/charliedaniels.jpg"
+    alt: "Mix Hawk with Charlie Daniels backstage Grand Ole Opry, October 2012"
+    index: 1
+
+  - url: "images/gallery/heroes-friends/jimedbrown.jpg"
+    alt: "Mix Hawk with Jim Ed Brown backstage Grand Ole Opry, October 2012"
+    index: 2
+
+  - url: "images/gallery/heroes-friends/jimmycnewman.jpg"
+    alt: "Mix Hawk with Jimmy C. Newman backstage Grand Ole Opry, October 2012"
+    index: 3
+
   - url: "images/gallery/heroes-friends/littlejimmiedickens.jpg"
-    alt: "littlejimmiedickens"
-    index: 27
+    alt: "Mix Hawk with Little Jimmie Dickens backstage Grand Ole Opry, October 2012"
+    index: 4
+
   - url: "images/gallery/heroes-friends/osborn.jpg"
-    alt: "osborn"
-    index: 28
-  - url: "images/gallery/heroes-friends/rickreiley.jpg"
-    alt: "rickreiley"
-    index: 29
-  - url: "images/gallery/heroes-friends/ridersinthesky.jpg"
-    alt: "ridersinthesky"
-    index: 30
+    alt: "Mix Hawk with Bobby Osborn backstage Grand Ole Opry, October 2012"
+    index: 5
+
   - url: "images/gallery/heroes-friends/royclarc.jpg"
-    alt: "royclarc"
-    index: 31
-  - url: "images/gallery/heroes-friends/sambush.jpg"
-    alt: "sambush"
-    index: 32
+    alt: "Mix Hawk with Roy Clark backstage Grand Ole Opry, October 2012"
+    index: 6
+
   - url: "images/gallery/heroes-friends/sharonwhite.jpg"
-    alt: "sharonwhite"
-    index: 33
-  - url: "images/gallery/heroes-friends/suziemcentire.jpg"
-    alt: "suziemcentire"
-    index: 34
-  - url: "images/gallery/heroes-friends/talamantes.jpg"
-    alt: "talamantes"
-    index: 35
-  - url: "images/gallery/heroes-friends/tamaniedove.jpg"
-    alt: "tamaniedove"
-    index: 36
+    alt: "Mix Hawk with Sharon White backstage Grand Ole Opry, October 2012"
+    index: 7
+
+  - url: "images/gallery/heroes-friends/ridersinthesky.jpg"
+    alt: "Mix Hawk with Riders In The Sky backstage Grand Ole Opry, October 2012"
+    index: 8
+
+  - url: "images/gallery/heroes-friends/jimlawderdale.jpg"
+    alt: "Mix Hawk with Jim Lauderdale backstage Grand Ole Opry, October 2012"
+    index: 9
+
+  - url: "images/gallery/heroes-friends/holliewilliams.jpg"
+    alt: "Mix Hawk with Holly Williams backstage Grand Ole Opry, October 2012"
+    index: 10
+
+  - url: "images/gallery/heroes-friends/fredlabour.jpg"
+    alt: "Mix Hawk with Fred LaBour backstage Grand Ole Opry, October 2012"
+    index: 11
+
+  - url: "images/gallery/heroes-friends/joannecash.jpg"
+    alt: "Mix Hawk with Joanne Cash at Nashville Cowboy Church, October 2012"
+    index: 12
+
+  - url: "images/gallery/heroes-friends/joediffie.jpg"
+    alt: "Mix Hawk with Joe Diffie at Silver Dollar Saloon, Nashville, October 2012"
+    index: 13
+
+  - url: "images/gallery/heroes-friends/byronberline.jpg"
+    alt: "Mix Hawk perform with Byron Berline, Oklahoma, 2019"
+    index: 14
+
+  - url: "images/gallery/heroes-friends/byronberlineband.jpg"
+    alt: "Mix Hawk with Byron Berline Band in Oklahoma, 2019"
+    index: 15
+
+  - url: "images/gallery/heroes-friends/byronjam.jpg"
+    alt: "Mix Hawk with Georgia Parker & Big Cedar Fever,Jonathan Hunt and Byron Berline at Double Stop Fiddle Shop, Guthrie, Oklahoma"
+    index: 16
+
+  - url: "images/gallery/heroes-friends/carman.jpg"
+    alt: "Mix Hawk with Carman"
+    index: 17
+
+  - url: "images/gallery/heroes-friends/branded.jpg"
+    alt: "Mix Hawk with Branded Duo"
+    index: 18
+
+  - url: "images/gallery/heroes-friends/ekki.jpg"
+    alt: "Mix Hawk with Ecki, lead singer for German Nu Metal band BRAINWASHED, Ukraine, 2013"
+    index: 19
+
+  - url: "images/gallery/heroes-friends/gene2.jpg"
+    alt: "Mix Hawk with Gene Collier, legendary Oklahoma songwriter and friend, Oklahoma 2020"
+    index: 20
+
+  - url: "images/gallery/heroes-friends/gene1.jpg"
+    alt: "Mix Hawk with Gene Collier, legendary Oklahoma songwriter and friend, Oklahoma 2025"
+    index: 21
+
+  - url: "images/gallery/heroes-friends/rickreiley.jpg"
+    alt: "Mix Hawk with Rick Reiley, legendary Oklahoma songwriter, Oklahoma 2020"
+    index: 22
+
+  - url: "images/gallery/heroes-friends/sambush.jpg"
+    alt: "Mix Hawk with Sasm Bush, St.Louise, Missoury, 2020"
+    index: 23
+
+  - url: "images/gallery/heroes-friends/johncowan.jpg"
+    alt: "Mix Hawk with John Cowan, Oklahoma 2020"
+    index: 24
+
+  - url: "images/gallery/heroes-friends/kaitlinmae1.jpg"
+    alt: "Mix Hawk with Kaitlin Mae at 2025 ISSA Awards, Atlanta, GA"
+    index: 26
+
+  - url: "images/gallery/heroes-friends/kaitlinmae2.jpg"
+    alt: "Mix Hawk with Kaitlin Mae at 2025 ISSA Awards, Atlanta, GA"
+    index: 27
+
   - url: "images/gallery/heroes-friends/tanieka1.jpg"
-    alt: "tanieka1"
-    index: 37
+    alt: "Mix Hawk with Tanieka at 2025 ISSA Awards, Atlanta, GA"
+    index: 28
+
   - url: "images/gallery/heroes-friends/tanieka2.jpg"
-    alt: "tanieka2"
-    index: 38
-  - url: "images/gallery/heroes-friends/travisebond.jpg"
-    alt: "travisebond"
-    index: 39
+    alt: "Mix Hawk with Tanieka at 2025 ISSA Awards, Atlanta, GA"
+    index: 29
+
+  - url: "images/gallery/heroes-friends/emilyefinke.jpg"
+    alt: "Mix Hawk with Emily E. Finke at 2025 ISSA Awards, Atlanta, GA"
+    index: 30
+
+  - url: "images/gallery/heroes-friends/birdie.jpg"
+    alt: "Mix Hawk with Birdie Nichols at 2025 ISSA Awards, Atlanta, GA"
+    index: 31
+
+  - url: "images/gallery/heroes-friends/davidingles.jpg"
+    alt: "Mix Hawk with David Ingles, Tulsa, Oklahoma 2020"
+    index: 32
+
+  - url: "images/gallery/heroes-friends/tamaniedove.jpg"
+    alt: "Mix Hawk with Tamanie Dove at 2025 ISSA Awards, Atlanta, GA"
+    index: 33
+
+  - url: "images/gallery/heroes-friends/travicebond.jpg"
+    alt: "Mix Hawk with Travis Bond in Tulsa, Oklahoma, 2019"
+    index: 34
+
+  - url: "images/gallery/heroes-friends/suziemcentire.jpg"
+    alt: "Mix Hawk with Suzie McEntire in Oklahoma City, Oklahoma, 2025"
+    index: 35
+
+  - url: "images/gallery/heroes-friends/talamantes.jpg"
+    alt: "Mix Hawk with Levi Talamantes in Tulsa, Oklahoma, 2025"
+    index: 36
+
+  - url: "images/gallery/heroes-friends/lancecarpenter.jpg"
+    alt: "Mix Hawk with Lance Carpenter in Arkansas, 2025"
+    index: 37
