@@ -1,13 +1,10 @@
 {{ define "main" }}
 <section class="section hero" aria-label="EPK" itemscope itemtype="https://schema.org/CollectionPage">
   <div class="wrap">
-    <h1>Electronic Press Kit</h1>
-    {{ with .Params.hero_video }}
-      <div class="video-container" itemscope itemtype="https://schema.org/VideoObject">
-        <meta itemprop="name" content="Mix Hawk EPK Video" />
-        <iframe width="560" height="315" src="{{ . }}" title="Mix Hawk EPK Video" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-      </div>
-    {{ end }}
+    <h1 class="epk-title">Electronic Press Kit</h1>
+    <figure class="hero-media" itemscope itemtype="https://schema.org/ImageObject">
+      <img loading="eager" src='{{ "images/mix-hawk-collage-epk.png" | relURL }}' alt="Mix Hawk photo collage" itemprop="contentUrl" />
+    </figure>
   </div>
   <div class="texture" aria-hidden="true"></div>
 </section>

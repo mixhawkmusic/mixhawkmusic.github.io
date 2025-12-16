@@ -18,6 +18,9 @@ params:
   tech_rider: "files/mix-hawk-tech-rider.pdf"
 ---
 
-Mix Hawk is an authentic country singer‑songwriter from Tulsa, Oklahoma, blending heartfelt storytelling with rootsy Americana and country rock. A Russian‑born musician with a uniquely American sound, Mix performs original songs that resonate on and off stage, bringing honest lyrics, warm vocals, and timeless melodies.
+Mix Hawk connects with his listeners by sharing his soul through music. With his warm and colorful voice, he can instantly
+captivate an audience. His unique sound is soulful and his vocal style and phrasing are intimate and pure. Like his personality,
+his performances are stormy and overwhelming but especially, they're filled with true emotion. Hawk’s musical creativity comes
+from deep inside, like that of an old soul.
 
-For bookings and media inquiries: booking@mixhawkmusic.com
+For bookings and media inquiries: band@mixhawkmusic.com
