@@ -1,0 +1,13 @@
+name: "Archive"
+description: "Interesting moments from the past"
+slug: "archive"
+featured: true
+order: 6
+images:
+  - url: "images/gallery/archive/skk-john-lennon-birthday.jpg"
+    alt: "Mix Hawk at SKK, John Lennon Birthday, St. Petersburg, Russia"
+    index: 1
+
+  - url: "images/gallery/archive/elvis-st-petersberd-russia-2023.jpg"
+    alt: "Mix Hawk at Elvis, St. Petersburg, Russia, 2023"
+    index: 2
