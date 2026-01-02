@@ -5,7 +5,7 @@ featured: true
 order: 6
 images:
   - url: "images/gallery/archive/beatles-festival-spb-1992.jpg"
-    alt: "Mix Hawk at SKK, John Lennon Birthday, St. Petersburg, Russia"
+    alt: "Mix Hawk at Beatles Festival, Sport Arena, St. Petersburg, Russia"
     index: 4
 
   - url: "images/gallery/archive/mollie-spb-circa-2010.jpg"
@@ -13,7 +13,7 @@ images:
     index: 5
     
   - url: "images/gallery/archive/skk-john-lennon-birthday.jpg"
-    alt: "Mix Hawk at SKK, Beatles festival, St. Petersburg, Russia"
+    alt: "Mix Hawk at Beatles festival, Sport Arena, St. Petersburg, Russia"
     index: 3
 
   - url: "images/gallery/archive/elvis-st-petersburd-russia-2013.jpg"
@@ -48,12 +48,12 @@ images:
     alt: "Mix Hawk at Centennial Lounge, Tulsa, OK, 2018"
     index: 15
 
-  - url: "images/gallery/archive/archive27.jpg"
-    alt: "Mix Hawk"
+  - url: "images/gallery/archive/harhu-jarve-country-music-festival-1990-1.jpg"
+    alt: "Mix Hawk at the Harku Järve County Music Festival, Tallinn, Estonia, 1990"
     index: 2
 
-  - url: "images/gallery/archive/archive28.jpg"
-    alt: "Mix Hawk "
+  - url: "images/gallery/archive/harhu-jarve-country-music-festival-1990.jpg"
+    alt: "Mix Hawk at the Harku Järve County Music Festival, Tallinn, Estonia, 1990"
     index: 1
 
   - url: "images/gallery/archive/mollie-pub-st-petersburg-circa-2010.jpg"
@@ -63,3 +63,7 @@ images:
   - url: "images/gallery/archive/mollie-spb-circa-2013.jpg"
     alt: "Mix Hawk at Mollie Pub, St. Petersburg, Russia, circa 2013"
     index: 13
+
+  - url: "images/gallery/archive/money-honey-saloon-st-petersburg-circa-2006.jpg"
+    alt: "Mix Hawk at Money Honey Saloon, St. Petersburg, Russia, circa 2006"
+    index: 16    
