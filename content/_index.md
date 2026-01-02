@@ -2,7 +2,7 @@
 title: "Mix Hawk — Country Singer/Songwriter"
 description: "Mix Hawk is an authentic country music singer-songwriter from Tulsa, Oklahoma. Born in Russia and inspired by Charlie Daniels Band and John Denver, Mix Hawk brings unique authentic country music. Listen to original songs on Spotify and Apple Music."
 tagline: "Authentic Country Music"
-hero_video: "https://www.youtube.com/embed/ED0HVP_Bgss?si=TH1_H_N0pgIaZEO0"
+hero_video: "https://www.youtube.com/embed/AQjVxgbe7wU?si=QTLJD-fffNvYzuv_"
 bio_image: "/images/mix-hawk-bio.jpg"
 ---
 
@@ -22,4 +22,4 @@ joined them at age 17 to stay faithful to this music ever since.
 Over the years, Mix Hawk became a legend in country music in the ex-USSR, performing, hosting radio shows, festivals,
 and clubs. Even after becoming a Christian minister, he continued to perform occasionally, always gathering a large audience.
 
-In 2014, Mix Hawk moved to the United States and in 2020 settled in Tulsa, Oklahoma, where he keeps on preaching and singing.
+In 2014, Mix Hawk moved to the United States and in 2025 settled in Nashville, Tennessee, where he's restarting his music career for the USA.
