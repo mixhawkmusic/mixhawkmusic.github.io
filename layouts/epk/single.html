@@ -89,7 +89,7 @@
       {{ range .videos }}
       <div class="video-container" itemscope itemtype="https://schema.org/VideoObject">
         <meta itemprop="name" content="Mix Hawk Music Video" />
-        <iframe width="560" height="315" src="{{ .url }}" title="Mix Hawk Video" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <iframe width="560" height="315" src="{{ .url }}" title="{{ .title }}" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
       {{ end }}
     {{ else }}

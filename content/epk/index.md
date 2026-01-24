@@ -11,14 +11,14 @@ resources:
   - src: "files/mix-hawk-logo.zip"
 params:
   hero_video: "https://www.youtube.com/embed/VIDEO_ID"
-  contact_email: "booking@mixhawkmusic.com"
+  contact_email: "band@mixhawkmusic.com"
   management_name: ""
   management_phone: ""
   stage_plot: "files/mix-hawk-stage-plot.pdf"
   tech_rider: "files/mix-hawk-tech-rider.pdf"
 videos:
   - url: "https://www.youtube.com/embed/1jrHOfCofoI"
-    title: "Mix Hawk Music Video"
+    title: "Mix Hawk EPK Music Video"
 ---
 
 Mix Hawk connects with his listeners by sharing his soul through music. With his warm and colorful voice, he can instantly
