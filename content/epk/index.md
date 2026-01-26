@@ -6,16 +6,14 @@ url: "/epk/"
 aliases: ["/press-kit/", "/media/epk/"]
 image: "images/mix-hawk-bio.jpg"
 resources:
-  - src: "files/mix-hawk-press-photos.zip"
-  - src: "files/mix-hawk-one-sheet.pdf"
-  - src: "files/mix-hawk-logo.zip"
+  - src: "files/mix-hawk-promo.zip"
 params:
   hero_video: "https://www.youtube.com/embed/VIDEO_ID"
   contact_email: "band@mixhawkmusic.com"
   management_name: ""
   management_phone: ""
-  stage_plot: "files/mix-hawk-stage-plot.pdf"
-  tech_rider: "files/mix-hawk-tech-rider.pdf"
+  stage_plot: "files/mix-hawk-band-stage-plot.pdf"
+  tech_rider: ""
 videos:
   - url: "https://www.youtube.com/embed/1jrHOfCofoI"
     title: "Mix Hawk EPK Music Video"
