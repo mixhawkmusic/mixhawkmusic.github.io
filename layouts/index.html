@@ -140,8 +140,11 @@
       {{ $sortedImages := sort $gallery.images "index" }}
       {{ range $sortedImages }}
       <figure class="gallery-item" data-category="{{ $gallery.slug }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <a href="{{ .url | relURL }}" data-index="{{ .index }}">
-          <img loading="lazy" src="{{ .url | relURL }}" alt="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk country music performance photo{{ end }}" itemprop="contentUrl">
+        {{ $image := resources.Get .url }}
+        {{ $imageUrl := .url | relURL }}
+        {{ if $image }}{{ $imageUrl = $image.RelPermalink }}{{ end }}
+        <a href="{{ $imageUrl }}" data-index="{{ .index }}">
+          <img loading="lazy" src="{{ $imageUrl }}" alt="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk country music performance photo{{ end }}" itemprop="contentUrl">
           <meta itemprop="name" content="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk Photo{{ end }}" />
         </a>
       </figure>

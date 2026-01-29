@@ -1,2 +1,0 @@
-# Heroes and Friends Gallery
-
