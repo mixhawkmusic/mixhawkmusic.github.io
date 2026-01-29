@@ -1,15 +1,22 @@
 <header class="site-header">
   <div class="wrap">
-    <a href="#home" class="brand" aria-label="Mix Hawk home">
-      <img src="{{ "/images/logo.svg" | relURL }}" alt="Mix Hawk" class="logo" />
+    {{ $isHome := .IsHome }}
+    {{ $isEPK := or (eq .Section "epk") (hasPrefix .RelPermalink "/epk/") (hasPrefix .RelPermalink "/press-kit/") (hasPrefix .RelPermalink "/media/epk/") }}
+    <a href='{{ if $isHome }}#home{{ else }}/{{ end }}' class="brand" aria-label="Mix Hawk home">
+      <img src='{{ "images/logo.svg" | relURL }}' alt="Mix Hawk" class="logo" />
     </a>
     <nav aria-label="Primary" class="site-nav">
       <ul>
-        <li><a href="#home">Main</a></li>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        {{ if $isEPK }}
+          <li><a href="/">Main</a></li>
+        {{ else }}
+          <li><a href="#home">Main</a></li>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="/epk/">EPK</a></li>
+        {{ end }}
       </ul>
     </nav>
   </div>

@@ -1,0 +1,81 @@
+name: "Live Shows"
+description: "Performances from stages across the country"
+slug: "live-shows"
+featured: true
+order: 1
+images:
+  - url: "images/gallery/live-shows/songwriters-round-m-h.jpg"
+    alt: "Songwriters round Mix Hawk"
+    index: 1
+  - url: "images/gallery/live-shows/songwriters-round-m-hawk-oklahoma.jpg"
+    alt: "Mix Hawk performing live"
+    index: 2
+  - url: "images/gallery/live-shows/songwriters-round-m-rose-n-uhlenhake-abby-grace.jpg"
+    alt: "Songwriters round Mix Hawk, Mattie Rose, Natalie Uhlenhake and Abby Grace"
+    index: 3
+  - url: "images/gallery/live-shows/songwriters-round-m-rose-natalie-uhlenhake.jpg"
+    alt: "Songwriters round Mix Hawk, Mattie Rose and Natalie Uhlenhake"
+    index: 4
+  - url: "images/gallery/live-shows/songwriters-round-mattie-rose-sing.jpg"
+    alt: "Songwriters round Mix Hawk and Mattie Rose"
+    index: 5
+  - url: "images/gallery/live-shows/songwriters-round-mattie-rose.jpg"
+    alt: "Mix Hawk and Mattie Rose songwriters round"
+    index: 6
+  - url: "images/gallery/live-shows/songwriters-round-mix-hawk-oklahoma.jpg"
+    alt: "Mix Hawk performing live"
+    index: 7
+  - url: "images/gallery/live-shows/songwriters-round-mix-hawk-singing.jpg"
+    alt: "Mix Hawk songwriters round"
+    index: 8
+  - url: "images/gallery/live-shows/songwriters-round-mix-hawk-the-get-up.jpg"
+    alt: "Mix Hawk songwriters round The Get Up"
+    index: 9
+  - url: "images/gallery/live-shows/songwriters-round-mix-hawk.jpg"
+    alt: "Mix Hawk Comodor open mic"
+    index: 10
+  - url: "images/gallery/live-shows/comodor-o-m-.jpg"
+    alt: "Mix Hawk Comodor open mic"
+    index: 11
+  - url: "images/gallery/live-shows/comodor-open-mic.jpg"
+    alt: "Comodor open mic Mix Hawk "
+    index: 12
+  - url: "images/gallery/live-shows/comodor3.jpg"
+    alt: "Comodor open mic Mix Hawk"
+    index: 13
+  - url: "images/gallery/live-shows/comodor4.jpg"
+    alt: "Comodor open mic"
+    index: 14
+  - url: "images/gallery/live-shows/shrine-gene-collier.jpg"
+    alt: "Shrine Mix Hawk and Gene Collier"
+    index: 15
+  - url: "images/gallery/live-shows/shrine-hawk.jpg"
+    alt: "Mix Hawk performing live - Shrine"
+    index: 16
+  - url: "images/gallery/live-shows/shrine-m-hawk.jpg"
+    alt: "Mix Hawk performing live - Shrine"
+    index: 17
+  - url: "images/gallery/live-shows/shrine-mix.jpg"
+    alt: "Mix Hawk performing live - Shrine"
+    index: 18
+  - url: "images/gallery/live-shows/shrine-show.jpg"
+    alt: "Mix Hawk performing live - Shrine"
+    index: 19  
+  - url: "images/gallery/live-shows/shrine-with-gene-collier.jpg"
+    alt: "Shrine Mix Hawk and Gene Collier"
+    index: 20
+  - url: "images/gallery/live-shows/tootsies-mix-hawk.jpg"
+    alt: "Mix Hawk performing live - Tootsies"
+    index: 21
+  - url: "images/gallery/live-shows/tootsies-show.jpg"
+    alt: "Mix Hawk performing live - Tootsies"
+    index: 22
+  - url: "images/gallery/live-shows/tootsies-with-band-1.jpg"
+    alt: "Mix Hawk performing - Tootsies"
+    index: 23
+  - url: "images/gallery/live-shows/tootsies-with-band-show.jpg"
+    alt: "Mix Hawk performing - Tootsies"
+    index: 24 
+  - url: "images/gallery/live-shows/photo_2025-12-25_14-02-43.jpg"
+    alt: "Mix Hawk performing live"
+    index: 25

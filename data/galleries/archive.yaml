@@ -1,0 +1,69 @@
+name: "Archive"
+description: "Interesting moments from the past"
+slug: "archive"
+featured: true
+order: 6
+images:
+  - url: "images/gallery/archive/beatles-festival-spb-1992.jpg"
+    alt: "Mix Hawk at Beatles Festival, Sport Arena, St. Petersburg, Russia"
+    index: 4
+
+  - url: "images/gallery/archive/mollie-spb-circa-2010.jpg"
+    alt: "Mix Hawk at Mollie, St. Petersburg, Russia, 2010"
+    index: 5
+    
+  - url: "images/gallery/archive/skk-john-lennon-birthday.jpg"
+    alt: "Mix Hawk at Beatles festival, Sport Arena, St. Petersburg, Russia"
+    index: 3
+
+  - url: "images/gallery/archive/elvis-st-petersburd-russia-2013.jpg"
+    alt: "Mix Hawk at Elvis, St. Petersburg, Russia, 2013"
+    index: 11
+    
+  - url: "images/gallery/archive/beatles-festival-spb-2010.jpg"
+    alt: "Mix Hawk at Beatles festival, St. Petersburg, Russia, 2010"
+    index: 6
+    
+  - url: "images/gallery/archive/elvis-bar-spb-circa-2012.jpg"
+    alt: "Mix Hawk at Elvis, St. Petersburg, Russia, 2012"
+    index: 7
+    
+  - url: "images/gallery/archive/elvis-bar-spb-circa-2012-1.jpg"
+    alt: "Mix Hawk at Elvis, St. Petersburg, Russia, 2012"
+    index: 8
+    
+  - url: "images/gallery/archive/country-club-spb-christmas-party-2013.jpg"
+    alt: "Mix Hawk at Country Club, St. Petersburg, Russia, 2013"
+    index: 9
+    
+  - url: "images/gallery/archive/mollie-pub-spb-circa-2013.jpg"
+    alt: "Mix Hawk at Mollie's Pub, St. Petersburg, Russia, 2013"
+    index: 10
+    
+  - url: "images/gallery/archive/centennial-launge-tulsa-2018.jpg"
+    alt: "Mix Hawk at Centennial Lounge, Tulsa, 2018"
+    index: 14
+
+  - url: "images/gallery/archive/centennial-lounge-tulsa-ok-2018.jpg"
+    alt: "Mix Hawk at Centennial Lounge, Tulsa, OK, 2018"
+    index: 15
+
+  - url: "images/gallery/archive/harhu-jarve-country-music-festival-1990-1.jpg"
+    alt: "Mix Hawk at the Harku Järve County Music Festival, Tallinn, Estonia, 1990"
+    index: 2
+
+  - url: "images/gallery/archive/harhu-jarve-country-music-festival-1990.jpg"
+    alt: "Mix Hawk at the Harku Järve County Music Festival, Tallinn, Estonia, 1990"
+    index: 1
+
+  - url: "images/gallery/archive/mollie-pub-st-petersburg-circa-2010.jpg"
+    alt: "Mix Hawk at Mollie Pub, St. Petersburg, Russia, circa 2010"
+    index: 16
+
+  - url: "images/gallery/archive/mollie-spb-circa-2013.jpg"
+    alt: "Mix Hawk at Mollie Pub, St. Petersburg, Russia, circa 2013"
+    index: 17
+
+  - url: "images/gallery/archive/money-honey-saloon-st-petersburg-circa-2006.jpg"
+    alt: "Mix Hawk at Money Honey Saloon, St. Petersburg, Russia, circa 2006"
+    index: 12    

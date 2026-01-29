@@ -1,0 +1,94 @@
+name: "Studio"
+description: "Behind the music in the recording studio"
+slug: "studio"
+featured: true
+order: 2
+images:
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-7.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 1
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-1.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 2
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-louis-drapp.jpg"
+    alt: "Drapp studios, Tulsa Ok, Louis Drapp"
+    index: 3
+    
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-cody-mariott.jpg" 
+    alt: "Drapp studios, Tulsa Ok, Cody Mariott"
+    index: 4
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-8.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 5
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-louis-drapp-1.jpg"
+    alt: "Drapp studios Tulsa Ok, Louis Drapp"
+    index: 6
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-louis-drapp-cody-mariott.jpg"
+    alt: "Drapp studios, Tulsa Ok, Louis Drapp and Cody Mariott"
+    index: 7
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-5.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 8
+    
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-8.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 9
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-11.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 10
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-12.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 11
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-13.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 12
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-14.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 13
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-15.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 14
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-16.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 15
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-17.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 16
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-18.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 17
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-19.jpg"
+    alt: "Mix Hawk and Louis Drapp in Drapp studios, Tulsa Ok"
+    index: 18
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-20.jpg"
+    alt: "Mix Hawk in Drapp studios, Tulsa Ok"
+    index: 19
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-21.jpg"
+    alt: "Louis Drapp in Drapp studios, Tulsa Ok"
+    index: 20
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-22.jpg"
+    alt: "Mix Hawk and Louis Drapp in Drapp studios, Tulsa Ok"
+    index: 21
+
+  - url: "images/gallery/studio/drapp-studios-tulsa-ok-23.jpg"
+    alt: "Mix Hawk and Louis Drapp in Drapp studios, Tulsa Ok"
+    index: 22

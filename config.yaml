@@ -17,6 +17,10 @@ params:
     facebook: "https://www.facebook.com/mixhawkmusic"
     twitter: "https://x.com/music_hawk"
 
+  # Gallery settings
+  gallery:
+    showAllTab: false  # Set to false to hide the "All" tab
+
 # Disable taxonomy pages (tags, categories) if not needed
 disableKinds:
   - taxonomy
