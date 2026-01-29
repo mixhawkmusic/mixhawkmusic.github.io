@@ -10,12 +10,13 @@ resources:
 params:
   hero_video: "https://www.youtube.com/embed/VIDEO_ID"
   contact_email: "band@mixhawkmusic.com"
-  management_name: ""
-  management_phone: ""
-  stage_plot: "files/mix-hawk-band-stage-plot.pdf"
+  management_name: "Tell Sackett"
+  management_phone: "+1 (615) 710-1850"
+  stage_plot: "https://drive.google.com/file/d/1eU6faY5sZM7u_YL4BKd1mmITPtun484Y/view?usp=drive_link"
+  all_photos_zip: https://drive.google.com/file/d/1bfqPlWmELfFhfhdV-mRF1SLhVYgU118B/view?usp=drive_link
   tech_rider: ""
 videos:
-  - url: "https://www.youtube.com/embed/1jrHOfCofoI"
+  - url: "https://www.youtube.com/embed/AQjVxgbe7wU?si=l7JNEHy8L0ZIpMND"
     title: "Mix Hawk EPK Music Video"
 ---
 

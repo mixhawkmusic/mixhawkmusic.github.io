@@ -8,6 +8,21 @@
   </div>
   <div class="texture" aria-hidden="true"></div>
 </section>
+<section class="section section-video" aria-label="Videos">
+  <div class="wrap">
+    <h2>Videos</h2>
+    {{ with .Params }}
+    {{ range .videos }}
+    <div class="video-container" itemscope itemtype="https://schema.org/VideoObject">
+      <meta itemprop="name" content="Mix Hawk Music Video" />
+      <iframe width="560" height="315" src="{{ .url }}" title="{{ .title }}" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+    {{ end }}
+    {{ else }}
+    <p>No videos available.</p>
+    {{ end }}
+  </div>
+</section>
 
 <section class="section section-paper" aria-label="Bio">
   <div class="wrap">
@@ -21,22 +36,8 @@
 <section class="section section-gallery" aria-label="Press Photos">
   <div class="wrap">
     <h2>Press Photos</h2>
-    <div class="gallery-grid">
-      {{ $press := index .Site.Data.galleries "press-kit" }}
-      {{ if $press }}
-        {{ range sort $press.images "index" }}
-          <figure class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
-            <a href="{{ .url | relURL }}" target="_blank" rel="noopener">
-              <img loading="lazy" src="{{ .url | relURL }}" alt="{{ if .alt }}{{ .alt }}{{ else }}Mix Hawk press photo{{ end }}" itemprop="contentUrl">
-            </a>
-          </figure>
-        {{ end }}
-      {{ else }}
-        <p>No press photos available yet.</p>
-      {{ end }}
-    </div>
     <p>
-      <a class="btn btn-solid" href='{{ "files/mix-hawk-press-photos.zip" | relURL }}'>Download All Photos (ZIP)</a>
+      {{ with .Params.all_photos_zip }}<a target="_blank" class="btn btn-solid" href="{{ . | relURL }}">Download All Photos (ZIP)</a>{{ end }}
     </p>
   </div>
 </section>
@@ -50,7 +51,7 @@
       <button class="tab-button" data-service="reverbnation">ReverbNation</button>
     </div>
     <div class="tracks">
-      {{ with .Site.Data.music }}
+      {{ with .Site.Data.music_epk }}
         {{ range first 3 .tracks }}
           {{ if or .spotify .apple .reverbnation }}
           <article class="track" itemscope itemtype="https://schema.org/MusicRecording">
@@ -82,34 +83,16 @@
   </div>
 </section>
 
-<section class="section section-video" aria-label="Videos">
-  <div class="wrap">
-    <h2>Videos</h2>
-    {{ with .Params }}
-      {{ range .videos }}
-      <div class="video-container" itemscope itemtype="https://schema.org/VideoObject">
-        <meta itemprop="name" content="Mix Hawk Music Video" />
-        <iframe width="560" height="315" src="{{ .url }}" title="{{ .title }}" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-      </div>
-      {{ end }}
-    {{ else }}
-      <p>No videos available.</p>
-    {{ end }}
-  </div>
-</section>
-
 <section class="section section-paper" aria-label="Press & Contact">
   <div class="wrap">
     <div class="paper">
       <h2>Press & Contact</h2>
       <ul>
-        <li><strong>Contact:</strong> <a href="mailto:{{ .Params.contact_email }}">{{ .Params.contact_email }}</a></li>
-        {{ with .Params.management_name }}<li><strong>Management:</strong> {{ . }}</li>{{ end }}
-        {{ with .Params.management_phone }}<li><strong>Phone:</strong> {{ . }}</li>{{ end }}
         {{ with .Params.stage_plot }}<li><a href="{{ . | relURL }}">Stage Plot (PDF)</a></li>{{ end }}
         {{ with .Params.tech_rider }}<li><a href="{{ . | relURL }}">Tech Rider (PDF)</a></li>{{ end }}
-        <li><a href='{{ "files/mix-hawk-one-sheet.pdf" | relURL }}'>One-Sheet (PDF)</a></li>
-        <li><a href='{{ "files/mix-hawk-logo.zip" | relURL }}'>Logos (ZIP)</a></li>
+        {{ with .Params.contact_email }}<li><strong>Contact:</strong> <a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        {{ with .Params.management_name }}<li><strong>Management:</strong> {{ . }}</li>{{ end }}
+        {{ with .Params.management_phone }}<li><strong>Phone:</strong> {{ . }}</li>{{ end }}
       </ul>
     </div>
   </div>
