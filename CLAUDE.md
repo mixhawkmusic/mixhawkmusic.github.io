@@ -130,6 +130,13 @@ Three main components with **no dependencies**:
 
 ## Content Management
 
+### Repository management rules
+
+- **Branching:** Use feature branches for new content, merge into `main` after review.
+- **Commit Messages:** Use imperative mood, concise, and descriptive.
+- **public/ directory:** Do not edit files in this directory directly.
+  Keep it for generated output only and always prevent it from being committed.
+
 ### Adding Gallery Photos
 
 1. Add image file to `static/images/gallery/`
